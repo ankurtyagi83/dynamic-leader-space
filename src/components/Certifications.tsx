@@ -59,20 +59,20 @@ const Certifications: React.FC = () => {
     <section id="certifications" className="section-padding py-20" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-brand-navy mb-2 reveal-animation">Education & Certifications</h2>
-          <div className="w-20 h-1 bg-brand-blue mx-auto reveal-animation"></div>
+          <h2 className="text-3xl font-bold text-foreground mb-2 reveal-animation">Education & Certifications</h2>
+          <div className="w-20 h-1 bg-primary mx-auto reveal-animation"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">
           <div className="reveal-animation">
-            <h3 className="text-2xl font-semibold text-brand-navy mb-6">Professional Certifications</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-6">Professional Certifications</h3>
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
               {certifications.map((cert, index) => (
                 <div 
                   key={index} 
                   className="glass-card p-5 flex flex-col items-center text-center transition-all hover:shadow-md"
                 >
-                  <div className="w-16 h-16 rounded-full bg-brand-blue/10 flex items-center justify-center mb-3">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="32"
@@ -83,26 +83,26 @@ const Certifications: React.FC = () => {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-brand-blue"
+                      className="text-primary"
                     >
                       <circle cx="12" cy="8" r="7" />
                       <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
                     </svg>
                   </div>
-                  <h4 className="text-sm font-medium text-brand-navy">{cert.name}</h4>
+                  <h4 className="text-sm font-medium text-foreground">{cert.name}</h4>
                 </div>
               ))}
             </div>
           </div>
           
           <div className="reveal-animation">
-            <h3 className="text-2xl font-semibold text-brand-navy mb-6">Education</h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-6">Education</h3>
             <div className="space-y-4">
               {education.map((edu, index) => (
                 <div key={index} className="glass-card p-5 transition-all hover:shadow-md">
-                  <h4 className="text-lg font-medium text-brand-navy">{edu.degree}</h4>
-                  <p className="text-brand-gray">{edu.institution}</p>
-                  {edu.year && <p className="text-sm text-brand-gray/80">{edu.year}</p>}
+                  <h4 className="text-lg font-medium text-foreground">{edu.degree}</h4>
+                  <p className="text-foreground/80">{edu.institution}</p>
+                  {edu.year && <p className="text-sm text-foreground/70">{edu.year}</p>}
                 </div>
               ))}
             </div>
