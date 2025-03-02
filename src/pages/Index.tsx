@@ -32,8 +32,16 @@ const Index: React.FC = () => {
     };
   }, []);
 
+  // Add class to the document body on mount
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+    return () => {
+      document.documentElement.classList.remove('dark');
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Header />
       <main className="flex-grow">
         <Hero />

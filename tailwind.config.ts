@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				brand: {
-					blue: "#1E40AF",
-					navy: "#0F172A",
-					gray: "#64748B",
-					lightGray: "#F1F5F9",
-					offWhite: "#FAFAFA"
+					blue: "#8B5CF6", // Changed to purple
+					navy: "#1A1F2C", // Dark background
+					gray: "#C8C8C9", // Light gray text
+					lightGray: "#333333", // Darker gray
+					offWhite: "#F1F1F1" // Off white
 				}
 			},
 			borderRadius: {
@@ -120,8 +120,8 @@ export default {
 				'slow-pulse': 'slow-pulse 4s ease-in-out infinite',
 			},
 			boxShadow: {
-				'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.06)',
-				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+				'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.16)',
+				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
 			},
 			backdropBlur: {
 				'xs': '2px',

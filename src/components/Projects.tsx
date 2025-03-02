@@ -21,6 +21,11 @@ const projects: Project[] = [
     link: "https://agileworldtechnologies.com/yourimmigrationexpert/",
   },
   {
+    title: "Collapse Survivor",
+    description: "A resource platform focused on helping individuals prepare for and survive societal collapse scenarios through education and community support.",
+    link: "https://collapsesurvivor.com/",
+  },
+  {
     title: "ADT Corporation Digital Transformation",
     description: "Led the transition from waterfall to Agile methodology, resulting in 30% increased team velocity and delivered projects six weeks ahead of schedule.",
     link: "#",
@@ -57,12 +62,12 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <section id="projects" className="section-padding py-20 bg-white" ref={sectionRef}>
+    <section id="projects" className="section-padding py-20 bg-background" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-brand-navy mb-2 reveal-animation">Projects</h2>
-          <div className="w-20 h-1 bg-brand-blue mx-auto reveal-animation"></div>
-          <p className="mt-6 max-w-2xl mx-auto text-brand-gray reveal-animation">
+          <h2 className="text-3xl font-bold text-foreground mb-2 reveal-animation">Projects</h2>
+          <div className="w-20 h-1 bg-primary mx-auto reveal-animation"></div>
+          <p className="mt-6 max-w-2xl mx-auto text-muted-foreground reveal-animation">
             A selection of projects I've led and delivered, showcasing my expertise in project management and Agile methodologies.
           </p>
         </div>
@@ -76,14 +81,14 @@ const Projects: React.FC = () => {
               rel="noopener noreferrer"
               className="block group"
             >
-              <div className="glass-card p-6 h-full transition-all duration-300 hover:shadow-lg border border-gray-100 hover:border-gray-200">
+              <div className="glass-card p-6 h-full transition-all duration-300 hover:shadow-lg border border-border hover:border-primary/20">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-brand-navy group-hover:text-brand-blue transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight className="text-brand-gray group-hover:text-brand-blue transition-colors" size={20} />
+                  <ArrowUpRight className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
                 </div>
-                <p className="text-brand-gray">
+                <p className="text-muted-foreground">
                   {project.description}
                 </p>
               </div>
