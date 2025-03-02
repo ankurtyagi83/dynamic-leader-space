@@ -79,6 +79,10 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
 }
 
 @layer utilities {
@@ -87,15 +91,25 @@
   }
   
   .glass-card {
-    @apply bg-white/90 backdrop-blur-sm border border-white/20 rounded-2xl shadow-glass;
+    @apply bg-white backdrop-blur-sm rounded-lg shadow-sm;
   }
   
   .reveal-animation {
-    @apply opacity-0;
+    @apply opacity-0 translate-y-4;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
   .reveal-animation.active {
-    @apply animate-fade-in;
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .animate-stagger {
+    @apply opacity-0 translate-y-4;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-stagger.active {
+    @apply opacity-100 translate-y-0;
   }
   
   .timeline-dot {

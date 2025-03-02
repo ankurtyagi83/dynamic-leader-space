@@ -19,6 +19,7 @@ const Header: React.FC = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -75,7 +76,7 @@ const Header: React.FC = () => {
       <div 
         className={cn(
           "md:hidden absolute left-0 right-0 bg-white shadow-md transition-all duration-300 overflow-hidden",
-          mobileMenuOpen ? "max-h-60" : "max-h-0"
+          mobileMenuOpen ? "max-h-80" : "max-h-0"
         )}
       >
         <nav className="flex flex-col px-4 py-2">
