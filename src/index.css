@@ -50,14 +50,18 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+  
+  h5, h6 {
     @apply tracking-tight;
   }
 }
 
 @layer utilities {
   .section-padding {
-    @apply py-12 px-4 md:py-20 md:px-6 lg:px-12 max-w-7xl mx-auto;
+    @apply py-16 px-4 md:py-24 md:px-6 lg:px-16 max-w-7xl mx-auto;
   }
   
   .glass-card {
@@ -97,36 +101,29 @@
   .neo-blur {
     @apply backdrop-blur-2xl bg-black/40 border border-white/10;
   }
+  
+  .elegant-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .elegant-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .elegant-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.cdnfonts.com/css/sf-pro-display') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.cdnfonts.com/css/sf-pro-display') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.cdnfonts.com/css/sf-pro-display') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('https://fonts.cdnfonts.com/css/sf-pro-display') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+/* Remove SF Pro Display font declarations as we're using Google Fonts now */

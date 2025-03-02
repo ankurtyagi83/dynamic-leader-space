@@ -64,7 +64,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				brand: {
-					blue: "#8B5CF6", // Changed to purple
+					blue: "#8B5CF6", // Purple shade
 					navy: "#1A1F2C", // Dark background
 					gray: "#C8C8C9", // Light gray text
 					lightGray: "#333333", // Darker gray
@@ -77,7 +77,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['"SF Pro Display"', 'system-ui', 'sans-serif'],
+				sans: ['Outfit', 'system-ui', 'sans-serif'],
+				serif: ['Playfair Display', 'Georgia', 'serif'],
 				mono: ['"SF Mono"', 'monospace'],
 			},
 			keyframes: {

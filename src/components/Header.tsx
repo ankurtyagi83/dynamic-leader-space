@@ -29,12 +29,12 @@ const Header: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
         isScrolled 
-          ? "py-3 bg-white/90 backdrop-blur-sm shadow-sm" 
+          ? "py-3 bg-background/90 backdrop-blur-sm border-b border-border/40" 
           : "py-5 bg-transparent"
       )}
     >
       <div className="container max-w-7xl mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-brand-navy font-semibold text-xl">
+        <a href="#home" className="text-foreground font-serif font-medium text-xl">
           Ankur Tyagi
         </a>
 
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-brand-gray hover:text-brand-blue transition-colors duration-200 text-sm font-medium"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-light elegant-underline"
             >
               {link.name}
             </a>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-brand-navy focus:outline-none"
+          className="md:hidden text-foreground focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <svg 
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
       {/* Mobile Menu */}
       <div 
         className={cn(
-          "md:hidden absolute left-0 right-0 bg-white shadow-md transition-all duration-300 overflow-hidden",
+          "md:hidden absolute left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border/40 transition-all duration-300 overflow-hidden",
           mobileMenuOpen ? "max-h-80" : "max-h-0"
         )}
       >
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-brand-gray hover:text-brand-blue py-3 transition-colors duration-200 text-sm font-medium border-b border-gray-100 last:border-b-0"
+              className="text-muted-foreground hover:text-foreground py-3 transition-colors duration-200 text-sm font-light border-b border-border/20 last:border-b-0"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
