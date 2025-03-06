@@ -1,8 +1,12 @@
-# Welcome to your Lovable project
+
+# Ankur Tyagi - Project Manager & Scrum Master Portfolio
+
+Personal portfolio website showcasing Ankur Tyagi's experience, skills, and achievements as a Project Manager and Scrum Master.
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/45a56f07-9e37-4943-b3c2-b2f40a07248b
+**Custom Domain**: https://ankurtyagi.in
 
 ## How can I edit this code?
 
@@ -52,7 +56,7 @@ npm run dev
 
 ## What technologies are used for this project?
 
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
@@ -60,10 +64,32 @@ This project is built with .
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## How to deploy this to ankurtyagi.in
 
-Simply open [Lovable](https://lovable.dev/projects/45a56f07-9e37-4943-b3c2-b2f40a07248b) and click on Share -> Publish.
+To deploy to your custom domain ankurtyagi.in, follow these steps:
 
-## I want to use a custom domain - is that possible?
+### Option 1: Using Netlify (Recommended)
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+1. Export your project to GitHub using the "Export to GitHub" option in Lovable.
+2. Create a Netlify account and connect it to your GitHub repository.
+3. Configure your build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. Add your custom domain in Netlify's domain settings:
+   - Go to Site settings > Domain management
+   - Add custom domain: `ankurtyagi.in`
+   - Follow Netlify's instructions to update your DNS settings with your domain registrar
+
+### Option 2: Manual Deployment
+
+1. Build your project locally:
+   ```sh
+   npm run build
+   ```
+2. The built files will be in the `dist` folder
+3. Upload these files to your web hosting provider that hosts ankurtyagi.in
+4. Configure your web server to serve the index.html file for all routes
+
+## Want more information?
+
+For more details about using custom domains with Lovable projects, visit our docs: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
