@@ -128,16 +128,16 @@ const Experience: React.FC = () => {
   }, []);
 
   return (
-    <section id="experience" className="section-padding bg-brand-lightGray py-20" ref={sectionRef}>
+    <section id="experience" className="section-padding bg-background/80 py-20" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-brand-navy mb-2 reveal-animation">Experience & Projects</h2>
-          <div className="w-20 h-1 bg-brand-blue mx-auto reveal-animation"></div>
+          <h2 className="text-3xl font-bold text-foreground mb-2 reveal-animation">Experience & Projects</h2>
+          <div className="w-20 h-1 bg-primary mx-auto reveal-animation"></div>
         </div>
         
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200 hidden md:block"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-border hidden md:block"></div>
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -146,30 +146,30 @@ const Experience: React.FC = () => {
                 className={`relative pl-0 md:pl-10 reveal-animation ${index % 2 === 0 ? 'md:animate-fade-in-left' : 'md:animate-fade-in-right'}`}
               >
                 {/* Timeline Marker */}
-                <div className="hidden md:block absolute -left-1.5 top-0 w-3 h-3 bg-brand-blue rounded-full"></div>
+                <div className="hidden md:block absolute -left-1.5 top-0 w-3 h-3 bg-primary rounded-full"></div>
                 
                 <div className="glass-card p-6 transition-all hover:shadow-lg">
                   <div className="mb-4">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-1">
-                      <h3 className="text-xl font-semibold text-brand-navy">{exp.company}</h3>
-                      <span className="text-brand-blue text-sm font-medium px-3 py-1 bg-brand-blue/10 rounded-full">
+                      <h3 className="text-xl font-semibold text-foreground">{exp.company}</h3>
+                      <span className="text-primary text-sm font-medium px-3 py-1 bg-primary/10 rounded-full">
                         {exp.period}
                       </span>
                     </div>
                     
                     {exp.location && (
-                      <p className="text-brand-gray text-sm mb-1">{exp.location}</p>
+                      <p className="text-muted-foreground text-sm mb-1">{exp.location}</p>
                     )}
                     
                     {exp.title && (
-                      <p className="text-lg font-medium text-brand-navy">{exp.title}</p>
+                      <p className="text-lg font-medium text-foreground">{exp.title}</p>
                     )}
                   </div>
                   
                   {exp.responsibilities.length > 0 && (
                     <div>
-                      <h4 className="text-md font-medium text-brand-navy mb-2">Key Role Responsibilities</h4>
-                      <ul className="space-y-2 text-brand-gray text-sm">
+                      <h4 className="text-md font-medium text-foreground mb-2">Key Role Responsibilities</h4>
+                      <ul className="space-y-2 text-muted-foreground text-sm">
                         {exp.responsibilities.map((item, idx) => (
                           <li key={idx} className="flex">
                             <span className="mr-2">•</span>
@@ -184,11 +184,11 @@ const Experience: React.FC = () => {
             ))}
             
             <div className="relative pl-0 md:pl-10 reveal-animation">
-              <div className="hidden md:block absolute -left-1.5 top-0 w-3 h-3 bg-brand-blue rounded-full"></div>
+              <div className="hidden md:block absolute -left-1.5 top-0 w-3 h-3 bg-primary rounded-full"></div>
               
               <div className="glass-card p-6">
-                <h3 className="text-xl font-semibold text-brand-navy mb-2">Additional Experience</h3>
-                <ul className="space-y-2 text-brand-gray">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Additional Experience</h3>
+                <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
                     <span>Magna InfoTech as SE working in sapient as a contractor (Jan 2010 to Sep 2010)</span>
