@@ -68,7 +68,40 @@ This project is built with:
 
 To deploy to your custom domain ankurtyagi.in, follow these steps:
 
-### Option 1: Using Netlify (Recommended)
+### Option 1: Using Hostinger
+
+1. First, build your project:
+   ```sh
+   npm run build
+   ```
+2. The build process will create a `dist` folder containing all the static files for your website.
+
+3. Log in to your Hostinger account and go to your hosting control panel.
+
+4. Upload the contents of the `dist` folder to your hosting:
+   - Navigate to "File Manager" in Hostinger
+   - Go to the `public_html` directory (or the root directory where your website files should be placed)
+   - Upload all files and folders from the `dist` folder
+   
+5. Configure domain settings:
+   - Go to "Domains" section in Hostinger control panel
+   - Set up ankurtyagi.in to point to your hosting (if not already done)
+   
+6. Configure SPA routing (important for React apps):
+   - Create or edit the `.htaccess` file in the root directory
+   - Add the following code to handle client-side routing:
+   ```
+   <IfModule mod_rewrite.c>
+     RewriteEngine On
+     RewriteBase /
+     RewriteRule ^index\.html$ - [L]
+     RewriteCond %{REQUEST_FILENAME} !-f
+     RewriteCond %{REQUEST_FILENAME} !-d
+     RewriteRule . /index.html [L]
+   </IfModule>
+   ```
+
+### Option 2: Using Netlify (Alternative)
 
 1. Export your project to GitHub using the "Export to GitHub" option in Lovable.
 2. Create a Netlify account and connect it to your GitHub repository.
@@ -80,7 +113,7 @@ To deploy to your custom domain ankurtyagi.in, follow these steps:
    - Add custom domain: `ankurtyagi.in`
    - Follow Netlify's instructions to update your DNS settings with your domain registrar
 
-### Option 2: Manual Deployment
+### Option 3: Manual Deployment to Any Hosting
 
 1. Build your project locally:
    ```sh
