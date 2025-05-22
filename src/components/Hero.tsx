@@ -25,12 +25,23 @@ const Hero: React.FC = () => {
       className="relative min-h-screen flex items-center justify-center bg-background pt-16"
       ref={heroRef}
     >
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background z-10"></div>
+        <img 
+          src="/background-abstract.jpg" 
+          alt="" 
+          className="w-full h-full object-cover opacity-30"
+          aria-hidden="true"
+        />
+      </div>
+
+      <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-blue/5 rounded-full filter blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-blue/5 rounded-full filter blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto px-4 max-w-6xl z-10">
+      <div className="container mx-auto px-4 max-w-6xl z-10 relative">
         <div className="text-center space-y-8">
           <div className="animate-stagger reveal-animation">
             <p className="text-brand-blue font-sans font-light text-sm uppercase tracking-widest mb-4">Project Manager & Scrum Master</p>
