@@ -25,15 +25,10 @@ const Hero: React.FC = () => {
       className="relative min-h-screen flex items-center justify-center bg-background pt-16"
       ref={heroRef}
     >
-      {/* Background image with overlay */}
+      {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background z-10"></div>
-        <img 
-          src="/background-abstract.jpg" 
-          alt="" 
-          className="w-full h-full object-cover opacity-30"
-          aria-hidden="true"
-        />
+        <div className="absolute inset-0 bg-[url('/background-abstract.jpg')] bg-cover bg-center opacity-30"></div>
       </div>
 
       <div className="absolute inset-0 overflow-hidden z-0">
